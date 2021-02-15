@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>newsaggretator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+<div class="jumbotron">
+    <h1 class="display-4">Falgun News Aggregator</h1>
+
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="/" role="button">Refresh</a>
+    </p>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h2>-->>bdgovtjob--<<</h2>
+            <ul>
+                {% for i, v in bdgovtjobs.items %}
+                <li>
+                    <a href="{{v}}">{{i}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+
+        <div class="col-6">
+            <h2>-->>telecom bd --<<</h2>
+            <ul>
+                {% for j, k in telejobs.items %}
+                <li>
+                    <a href="{{k}}">{{j}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>
