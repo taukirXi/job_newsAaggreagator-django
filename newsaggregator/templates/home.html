@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>newsaggretator</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-</head>
-<body>
-<div class="jumbotron">
-    <h1 class="display-4">BD-JOBS Aggregator</h1>
+{% extends 'base.html' %}
 
-    <p class="lead">
-        <a class="btn btn-primary btn-lg" href="/" role="button">Refresh</a>
-    </p>
-</div>
+{% block title %} Home {% endblock %}
 
-
+{% block body %}
 <div class="container">
     <div class="row">
         <div class="col-6">
@@ -45,5 +32,4 @@
 </div>
 
 
-</body>
-</html>
+{% endblock %}

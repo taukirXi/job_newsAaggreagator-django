@@ -2,8 +2,8 @@ from bs4 import BeautifulSoup
 import requests
 
 def bdgovtjob():
-    source = requests.get("https://bdgovtjob.net/").text
-    soup = BeautifulSoup(source, 'lxml')
+    bdjobs = requests.get("https://bdgovtjob.net/").text
+    soup = BeautifulSoup(bdjobs, 'lxml')
 
     jobs_list = {}
     for article in soup.find_all('article'):
@@ -20,8 +20,8 @@ def bdgovtjob():
 
 
 def telebd():
-    source = requests.get("https://teletalkbd.com/")
-    soup = BeautifulSoup(source.text, 'lxml')
+    tele = requests.get("https://teletalkbd.com/")
+    soup = BeautifulSoup(tele.text, 'lxml')
 
     headlines = {}
     for head in soup.find_all('li', class_='item clearfix'):
@@ -30,3 +30,5 @@ def telebd():
         headlines[h] = l
 
     return headlines
+
+

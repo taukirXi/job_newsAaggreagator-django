@@ -12,3 +12,8 @@ def home(request):
 
 
     return render(request, 'home.html', {'bdgovtjobs': bdgovt, 'telejobs': telebd})
+
+
+
+def about(request):
+    return render(request, 'about.html',)
